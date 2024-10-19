@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnavi  - Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #984caf;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #984caf;
+            border-bottom: 2px solid #984caf;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        ul li {
+            background-color: #e6d3f1;
+            margin-bottom: 5px;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .project-item {
+            background-color: #e6d3f1;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+        .project-item:hover {
+            background-color: #984caf;
+            color: #fff;
+            transform: scale(1.05);
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        #education-list li:hover {
+            background-color: #984caf;
+            color: #fff;
+            transform: scale(1.05);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        #skills-list li:hover {
+            background-color: #984caf;
+            color: #fff;
+            transform: scale(1.05);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .contact a {
+            text-decoration: none;
+            color: #984caf;
+            font-weight: bold;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #984caf;
+            color: white;
+            border-radius: 0 0 15px 15px;
+        }
+    </style>
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            const isDisplayed = details.style.display === 'block';
+            details.style.display = isDisplayed ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Information -->
+        <h1>Vaishnavi Gambhire</h1>
+        <div class="contact">
+            <p>Baramati, Pune | <a href="mailto:vaishnavig21199@gmail.com">vaishnavig21199@gmail.com</a> | +91-9881480791</p>
+        </div>
+
+        <!-- About Me Section -->
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I am Vaishnavi Gambhire, a postgraduate in Computer Science, with strong interests in data analytics and software development. I am proficient in Python, Java, and SQL, and aspire to work as a Python Developer or Data Analyst. My goal is to grow in the IT industry and become financially independent to support my family.</p>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h2>Education</h2>
+            <ul id="education-list">
+                <li>M.Sc. Computer Science (2022) - 89%, Pune University</li>
+                <li>B.Sc. Computer Science (2020) - 70%, Pune University</li>
+                <li>HSC - 68%, Pune Board</li>
+                <li>SSC - 88%, Pune Board</li>
+            </ul>
+        </div>
+
+
+        <!-- Projects Section -->
+        <div class="section">
+            <h2>Projects</h2>
+
+            <!-- Project 1 -->
+            <div class="project-item" onclick="toggleDetails('project1-details')">
+                <strong>Music Player (Python):</strong> A desktop application with basic music controls built using Tkinter and Pygame libraries.
+                <div id="project1-details" class="details">
+                    <p>This project involved developing a basic music player application using Python. The goal was to create a user-friendly desktop application that allows users to play, pause, stop, and navigate through songs in their music library.</p>
+                    <p><strong>Technologies Used:</strong> Tkinter for GUI, Pygame for audio playback.</p>
+                    <p><strong>Features:</strong></p>
+                    <ul style="color:#333">
+                        <li>Play, Pause, Stop buttons for music control</li>
+                        <li>Navigation between previous and next tracks</li>
+                        <li>Volume control and playlist management</li>
+                    </ul>
+                    <p><strong>Challenges and Solution:</strong> Ensured smooth playback and interface responsiveness by using multithreading to separate the music playing functions from the GUI.</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item" onclick="toggleDetails('project2-details')">
+                <strong>Café Management System (Java):</strong> A system to manage orders and inventory for a café using Java and MySQL.
+                <div id="project2-details" class="details">
+                    <p>This was a desktop-based project aimed at simulating the management of orders and inventory in a café setting.</p>
+                    <p><strong>Technologies Used:</strong> Java for the system, Swing for the user interface, JDBC for database connection.</p>
+                    <p><strong>Features:</strong></p>
+                    <ul style="color:#333">
+                        <li>Place orders by selecting items from a menu</li>
+                        <li>Generates itemized bills and applies discounts</li>
+                        <li>Tracks inventory levels and updates stock after each sale</li>
+                    </ul>
+                    <p><strong>Challenges and Solution:</strong> Ensured real-time updating of inventory using database transactions to avoid stock depletion issues.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2>Skills</h2>
+            <ul id="skills-list">
+                <li>Python</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>HTML/CSS</li>
+                <li>PHP</li>
+                <li>Data Analysis</li>
+            </ul>
+        </div>
+
+        <!-- Soft Skills Section -->
+        <div class="section">
+            <h2>Soft Skills</h2>
+            <ul id="skills-list">
+                <li>Problem-Solving</li>
+                <li>Teamwork</li>
+                <li>Time Management</li>
+                <li>Leadership</li>
+            </ul>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Vaishnavi Gambhire</p>
+        </footer>
+    </div>
+</body>
+</html>
